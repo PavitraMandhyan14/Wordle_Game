@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Play {
+    public static void main(String[] args) {
+
+        String[] words = {"HELLO","GREAT" ,"GROUP", "BROWN", "CRATE","FIGHT","RIGHT"};
+        Wordle board = new Wordle(words);
+
+        Scanner input = new Scanner(System.in);
+
+        while (!board.isGameOver()) {
+            board.printBoard(input);
+        }
+        board.printResult();
+        input.close();
+    }
+}
